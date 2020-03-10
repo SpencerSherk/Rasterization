@@ -12,7 +12,7 @@ Interactive application that allows user to add, edit, and delete 3D meshes. A f
 - The key <kbd>3</kbd> will import a new copy the mesh `bunny.off`, scale it to fit into a unit cube and center it on the origin.
 
 3 Rendering Modes:
-===============
+--------------------
 
 1. **Wireframe**: only the edges of the triangles are drawn.
 
@@ -24,8 +24,8 @@ Interactive application that allows user to add, edit, and delete 3D meshes. A f
 
 To compute the per-vertex normals we first compute the per-face normals, and then average them on the neighboring vertices. In other words, the normal of the vertex of a mesh is  the average of the normals of the faces touching it. 
 
-Object Selection & Control
-===============
+Object Selection
+--------------------
 Clicking on a object will select the object, changing its color.
 
 Note that, because vertex coordinates are transformed by a different object matrix **M** in the vertex shader (from object space to world space), we compute the ray parameter **(e, d)** in the canonical viewing volume (same as the world space for this exercise),transform the parameters by **M<sup>-1</sup>**,  compute the intersection in object space, and then transform back the intersection point from the object space to the world space.
